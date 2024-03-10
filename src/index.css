@@ -1,13 +1,147 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+.todos-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem auto;
+}
+
+.todos {
+  margin: 5rem auto;
+  width: 40rem;
+  height: 70rem;
+  background-color: #d8ecf3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1.3rem 2rem;
+}
+
+.todo-input {
+  border-radius: 2rem;
+  border: none;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.input-section {
+  width: 100%;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #63b4cf;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5),
+    0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+}
+
+.add-button {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 400;
+  border: none;
+  padding: 0.5rem;
+  background: none;
+  top: 0;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.todos-container {
+  margin-top: 2rem;
+  max-height: 60rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.todos-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.todo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2rem solid #fff;
+  padding: 0rem 0.75rem;
+  border-radius: 0.30rem;
+}
+
+.todo-description {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  width: 100%;
+}
+
+.todo-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date-time {
+  font-size: 1.3rem;
+  padding: 0.5rem 0 0 0.5rem;
+  color: #999;
+}
+
+.todo-description .description {
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  background: transparent;
+  color: #747272;
+}
+
+.todo-description.description::first-letter {
+  text-transform: capitalize;
+}
+
+.todo-description .edit {
+  padding-left: 0.5rem;
+  font-size: 2rem;
+}
+
+.button-section button.edit,
+.button-section button.delete,
+.button-section button.save {
+  margin-right: 1rem;
+  font-size: 2rem;
+  background: none;
+  cursor: pointer;
+}
+
+.edit-todo {
+  border: none;
+  padding: 1rem 1rem;
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+  width: 30rem;
+  border-radius: 0.5rem;
 }
